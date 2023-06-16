@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'examen';
+  texto = 'Bievenido utiliza la barra de navegacion para ver todas las paginas'
 }

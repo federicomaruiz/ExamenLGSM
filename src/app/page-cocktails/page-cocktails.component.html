@@ -1,0 +1,12 @@
+<h3 class="mt-3">{{titulo}}</h3>
+<div class="row">
+    <div *ngFor="let mar of margaritas" class="col-4 g-4">
+        <div clas="card">
+            <img src="{{mar.strDrinkThumb}}" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{mar.strDrink}}</h5>
+                <p class="card-text">{{mar.strAlcoholic}}</p>
+            </div>
+        </div>
+    </div>
+</div>

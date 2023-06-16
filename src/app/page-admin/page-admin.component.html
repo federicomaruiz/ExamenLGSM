@@ -1,0 +1,23 @@
+<form [formGroup]="listaForm">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Nombre</label>
+        <input formControlName='nombre' type="text" class="form-control" id="exampleInputEmail1"
+            aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Ingrediente</label>
+        <input formControlName='ingrediente' type="text" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Precio</label>
+        <input formControlName='precio' type="text" class="form-control" id="exampleInputPassword1">
+    </div>
+    <button (click)="sendData()" type="submit" class="btn btn-primary">Guardar</button>
+</form>
+
+<div>
+    <ul>
+        <li class="mb-3" *ngFor="let plato of arrLista">{{plato.nombre}} - {{plato.ingrediente}} - {{plato.precio}}
+            <button (click)="delete(plato.id)" type="button" class="btn btn-danger me-2">Eliminar</button>
+    </ul>
+</div>
